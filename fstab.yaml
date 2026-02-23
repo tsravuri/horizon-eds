@@ -1,2 +1,4 @@
 mountpoints:
-  /: https://github.com/tsravuri/horizon-eds/tree/main/content
+ /:
+   url: https://raw.githubusercontent.com/tsravuri/horizon-eds/main/content
+   type: markup

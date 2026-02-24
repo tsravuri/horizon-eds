@@ -4,11 +4,12 @@ main > .section.cards-section {
   margin-top: 0;
   position: relative;
   z-index: 3;
+  padding-bottom: 140px;
 }
 
 .cards {
-  transform: translateY(-140px);
-  margin-bottom: -140px;
+  position: relative;
+  top: -140px;
 }
 
 .cards > ul {
@@ -66,9 +67,12 @@ main > .section.cards-section {
 }
 
 @media (width >= 900px) {
+  main > .section.cards-section {
+    padding-bottom: 180px;
+  }
+
   .cards {
-    transform: translateY(-180px);
-    margin-bottom: -180px;
+    top: -180px;
   }
 
   .cards > ul {

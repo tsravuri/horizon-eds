@@ -62,7 +62,7 @@ main > .section.hero-section > div {
 	align-items: center;
 	justify-content: space-between;
 	gap: var(--space--x4);
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 }
 
 .hero .hero-brand-links,
@@ -70,12 +70,11 @@ main > .section.hero-section > div {
 	display: flex;
 	align-items: center;
 	gap: var(--space--x5);
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 }
 
 .hero .hero-logo {
 	display: inline-flex;
-	margin-right: auto;
 	text-decoration: none;
 }
 
@@ -149,10 +148,12 @@ main > .section.hero-section > div {
 	position: relative;
 	margin: 0 auto;
 	max-width: 720px;
+	width: min(100%, 720px);
 }
 
 .hero input {
 	width: 100%;
+	display: block;
 	border: 0;
 	border-radius: var(--corners-pill);
 	padding: var(--space--x4) var(--space--x12) var(--space--x4) var(--space--x6);
@@ -168,11 +169,11 @@ main > .section.hero-section > div {
 
 .hero .hero-search button {
 	position: absolute;
-	right: var(--space--x1-half);
+	right: -6px;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 38px;
-	height: 38px;
+	width: 46px;
+	height: 46px;
 	padding: 0;
 	border: 0;
 	border-radius: var(--corners-circle);
@@ -180,6 +181,9 @@ main > .section.hero-section > div {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	appearance: none;
+	cursor: pointer;
+	z-index: 2;
 }
 
 .hero .hero-search button img {
@@ -198,6 +202,10 @@ main > .section.hero-section > div {
 	.hero .hero-brand-links,
 	.hero .hero-tools-links {
 		flex-wrap: nowrap;
+	}
+
+	.hero .hero-brand-links {
+		justify-content: flex-start;
 	}
 
 	.hero .hero-shell {

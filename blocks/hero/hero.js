@@ -3,4 +3,4 @@ export default function decorate(block) {
   block.innerHTML = `
     <input type="text" placeholder="${placeholder}" />
  `;
-} 
+}

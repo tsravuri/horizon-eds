@@ -20,9 +20,9 @@ main > .section.hero-section > div {
 .hero {
 	position: relative;
 	overflow: hidden;
-	min-height: clamp(520px, 86vh, 760px);
+	min-height: clamp(560px, 88vh, 790px);
 	background: var(--color--ui-background-brand-01);
-	padding: var(--space--x5);
+	padding: var(--space--x3);
 	text-align: center;
 	color: var(--color--text-primary-inverse);
 	font-family: var(--typefamily-primary);
@@ -43,15 +43,18 @@ main > .section.hero-section > div {
 .hero .hero-overlay {
 	position: absolute;
 	inset: 0;
-	background: linear-gradient(180deg, rgb(13 0 77 / 45%) 0%, rgb(13 0 77 / 92%) 75%);
+	background:
+		linear-gradient(90deg, rgb(13 0 77 / 96%) 0%, rgb(13 0 77 / 96%) 52%, rgb(13 0 77 / 56%) 74%, rgb(13 0 77 / 48%) 100%),
+		linear-gradient(180deg, rgb(13 0 77 / 40%) 0%, rgb(13 0 77 / 76%) 75%);
 }
 
 .hero .hero-shell {
 	position: relative;
 	z-index: 1;
-	max-width: 1200px;
+	max-width: 1280px;
+	min-height: calc(clamp(560px, 88vh, 790px) - (var(--space--x3) * 2));
 	margin: 0 auto;
-	padding: var(--space--x2) 0 var(--space--x14);
+	padding: var(--space--x4) var(--space--x7) var(--space--x15);
 }
 
 .hero .hero-topbar {
@@ -66,7 +69,7 @@ main > .section.hero-section > div {
 .hero .hero-tools-links {
 	display: flex;
 	align-items: center;
-	gap: var(--space--x4);
+	gap: var(--space--x5);
 	flex-wrap: wrap;
 }
 
@@ -90,20 +93,41 @@ main > .section.hero-section > div {
 	line-height: var(--leading--1-2);
 }
 
-.hero .hero-tools-links a {
-	border: var(--border--x1) solid rgb(255 255 255 / 24%);
-	border-radius: var(--corners-pill);
-	background: rgb(255 255 255 / 10%);
-	padding: var(--space--x2) var(--space--x4);
+.hero .hero-brand-links > a:not(.hero-logo, :last-child)::after {
+	content: ' >';
+	margin-left: var(--space--x2);
+	font-weight: var(--typeweight--bold);
 }
 
-.hero .hero-tools-links a:hover {
-	background: rgb(255 255 255 / 18%);
+.hero .hero-tools-links .hero-tool {
+	border: var(--border--x1) solid rgb(255 255 255 / 24%);
+	border-radius: var(--corners-tag);
+	background: var(--color--ui-background-light);
+	color: var(--color--text-brand-01);
+	padding: var(--space--x2) var(--space--x5);
+}
+
+.hero .hero-tools-links .hero-tool:hover {
+	background: var(--color--ui-background-med);
+}
+
+.hero .hero-tools-links .hero-tool-sales {
+	background: var(--color--interactive-action);
+}
+
+.hero .hero-tools-links .hero-tool-icon {
+	min-width: 44px;
+	min-height: 44px;
+	padding: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
 }
 
 .hero .hero-content {
-	max-width: 860px;
-	margin: var(--space--x18) auto 0;
+	max-width: 920px;
+	margin: var(--space--x14) auto 0;
 }
 
 .hero h1 {
@@ -115,32 +139,60 @@ main > .section.hero-section > div {
 }
 
 .hero p {
-	margin: var(--space--x4) auto var(--space--x10);
+	margin: var(--space--x4) auto var(--space--x9);
 	color: var(--color--text-primary-inverse);
 	font-size: var(--typesize-h5);
 	font-weight: var(--typeweight--medium);
 }
 
 .hero .hero-search {
+	position: relative;
 	margin: 0 auto;
-	max-width: 680px;
+	max-width: 720px;
 }
 
 .hero input {
 	width: 100%;
 	border: 0;
 	border-radius: var(--corners-pill);
-	padding: var(--space--x4) var(--space--x6);
-	color: var(--color--text-primary);
+	padding: var(--space--x4) var(--space--x12) var(--space--x4) var(--space--x6);
+	color: var(--color--text-brand-01);
 	background: var(--color--ui-field-control-background);
-	font-size: var(--typesize-default);
+	font-size: var(--typesize-h6);
+}
+
+.hero input::placeholder {
+	color: var(--color--text-brand-01);
+	opacity: 1;
+}
+
+.hero .hero-search button {
+	position: absolute;
+	right: var(--space--x1-half);
+	top: 50%;
+	transform: translateY(-50%);
+	width: 38px;
+	height: 38px;
+	padding: 0;
+	border: 0;
+	border-radius: var(--corners-circle);
+	background: var(--color--interactive-primary);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero .hero-search button img {
+	width: 18px;
+	height: 18px;
+	filter: brightness(0) invert(1);
 }
 
 @media (width >= 900px) {
 	.hero {
-		min-height: clamp(600px, 88vh, 820px);
-		padding-left: var(--space--x10);
-		padding-right: var(--space--x10);
+		min-height: clamp(640px, 90vh, 840px);
+		padding-left: var(--space--x4);
+		padding-right: var(--space--x4);
 	}
 
 	.hero .hero-brand-links,
@@ -149,7 +201,7 @@ main > .section.hero-section > div {
 	}
 
 	.hero .hero-shell {
-		padding-top: var(--space--x3);
+		padding-top: var(--space--x4);
 		padding-bottom: var(--space--x16);
 	}
 
@@ -158,7 +210,7 @@ main > .section.hero-section > div {
 	}
 
 	.hero .hero-content {
-		margin-top: var(--space--x20);
+		margin-top: var(--space--x18);
 	}
 }
 

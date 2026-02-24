@@ -31,12 +31,12 @@ export default function decorate(block) {
   const dropdownMarkup = heroDropdowns
     .map((dropdown) => {
       const menuItems = dropdown.items
-        .map((item) => `<li><a href="/">${item}</a></li>`)
+        .map((item) => `<li><a href="#">${item}</a></li>`)
         .join('');
       return `<div class="hero-nav-item has-dropdown">
-        <button type="button" class="hero-nav-trigger" aria-haspopup="true">
+        <a class="hero-nav-trigger" href="#" aria-haspopup="true">
           ${dropdown.label}
-        </button>
+        </a>
         <ul class="hero-nav-menu">
           ${menuItems}
         </ul>

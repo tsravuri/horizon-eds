@@ -106,7 +106,6 @@ main > .section.hero-section > div {
 .hero .hero-nav-trigger {
 	display: inline-flex;
 	align-items: center;
-	gap: var(--space--x2);
 	margin: 0;
 	border: 0;
 	padding: 0;
@@ -119,20 +118,19 @@ main > .section.hero-section > div {
 	cursor: pointer;
 }
 
-.hero .hero-nav-arrow {
-	width: 7px;
-	height: 7px;
+
+.hero .hero-nav-trigger::after {
+	content: '>';
 	display: inline-block;
-	border-style: solid;
-	border-width: 2px 2px 0 0;
-	border-color: currentcolor;
-	transform: rotate(45deg);
+	margin-left: var(--space--x2);
+	font-weight: var(--typeweight--bold);
+	transform-origin: center;
 	transition: transform 0.2s ease;
-	margin-top: -1px;
 }
 
-.hero .hero-nav-trigger[aria-expanded='true'] .hero-nav-arrow {
-	transform: rotate(135deg);
+.hero .hero-nav-item:hover .hero-nav-trigger::after,
+.hero .hero-nav-item:focus-within .hero-nav-trigger::after {
+	transform: rotate(90deg);
 }
 
 .hero .hero-nav-menu {
@@ -146,6 +144,12 @@ main > .section.hero-section > div {
 	background: var(--color--ui-background-light);
 	border-radius: var(--corners-card);
 	z-index: 5;
+	display: none;
+}
+
+.hero .hero-nav-item:hover .hero-nav-menu,
+.hero .hero-nav-item:focus-within .hero-nav-menu {
+	display: block;
 }
 
 .hero .hero-nav-menu li {

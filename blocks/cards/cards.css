@@ -11,7 +11,7 @@ main > .section.cards-container {
 .cards {
   position: relative;
   top: 0;
-  transform: translateY(-240px);
+  transform: translateY(-260px);
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 var(--space--x6);
@@ -101,7 +101,7 @@ main > .section.cards-container {
 
   .cards {
     top: 0;
-    transform: translateY(-300px);
+    transform: translateY(-320px);
   }
 
   .cards > ul {

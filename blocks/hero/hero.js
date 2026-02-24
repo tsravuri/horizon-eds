@@ -33,11 +33,11 @@ export default function decorate(block) {
           <a href="/">For Work</a>
         </div>
         <div class="hero-tools-links">
-          <a href="/">Contact Sales</a>
-          <a href="/">Get Support</a>
-          <a href="/">Sign In</a>
-          <a href="/">Cart</a>
-          <a href="/">Locale</a>
+          <a class="hero-tool hero-tool-sales" href="/">Contact Sales</a>
+          <a class="hero-tool" href="/">Get Support</a>
+          <a class="hero-tool" href="/">Sign In</a>
+          <a class="hero-tool hero-tool-icon" href="/" aria-label="Cart">🛒</a>
+          <a class="hero-tool hero-tool-icon" href="/" aria-label="Locale">🌐</a>
         </div>
       </div>
       <div class="hero-content">
@@ -45,6 +45,9 @@ export default function decorate(block) {
         <p>${subtitle}</p>
         <div class="hero-search">
           <input type="text" placeholder="${placeholder}" aria-label="Search" />
+          <button type="button" aria-label="Submit search">
+            <img src="/icons/search.svg" alt="" width="18" height="18" loading="lazy" />
+          </button>
         </div>
       </div>
     </div>

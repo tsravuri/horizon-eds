@@ -13,7 +13,7 @@ export default function decorate(block) {
     .filter(Boolean);
 
   const [title = '', subtitle = '', placeholder = 'What can I help you find?'] = values;
-  const backgroundVideoSrc = 'https://www.pearson.com/content/dam/global/shared/brand/evolution/video/waves-fucsia-3-pearsonpurple-slow-16x9-l2r/waves-fucsia-3-pearsonpurple-slow-16x9-l2r-hires-v01.mp4';
+  const backgroundVideoSrc = 'https://content.da.live/horizon-sandbox/horizon-v1/content/dam/global/shared/brand/horizon/waves-fucsia-3-pearsonpurple-slow-16x9-l2r-hires-v01.mp4';
   const heroDropdowns = [
     {
       label: 'By Customer',

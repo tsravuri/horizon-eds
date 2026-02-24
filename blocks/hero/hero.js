@@ -1,6 +1,7 @@
 export default function decorate(block) {
   document.body.style.overflowY = '';
   document.documentElement.style.overflowY = '';
+  document.body.classList.add('has-custom-hero');
 
   const section = block.closest('.section');
   if (section) {

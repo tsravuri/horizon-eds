@@ -12,6 +12,8 @@ main > .section.hero-section > div {
 .hero {
 	position: relative;
 	overflow: hidden;
+	min-height: 100vh;
+	min-height: 100svh;
 	background: var(--color--ui-background-brand-01);
 	padding: var(--space--x5);
 	text-align: center;

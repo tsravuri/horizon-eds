@@ -56,7 +56,7 @@ main > .section.hero-section .hero-wrapper {
 	min-height: calc(100svh - (var(--space--x5) * 2));
 	display: flex;
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: none;
 	margin: 0 auto;
 	padding: var(--space--x2) 0 var(--space--x14);
 }
@@ -145,8 +145,8 @@ main > .section.hero-section .hero-wrapper {
 
 @media (width >= 900px) {
 	.hero {
-		padding-left: var(--space--x10);
-		padding-right: var(--space--x10);
+		padding-left: var(--space--x5);
+		padding-right: var(--space--x5);
 	}
 
 	.hero .hero-brand-links,

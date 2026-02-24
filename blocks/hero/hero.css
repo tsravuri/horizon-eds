@@ -67,7 +67,8 @@ main > .section.hero-section > div {
 	justify-content: space-between;
 	gap: var(--space--x4);
 	flex-wrap: nowrap;
-	background: var(--color--ui-background-brand-01);
+	background: var(--color--ui-background-brand-00);
+	padding: var(--space--x4) 0;
 }
 
 .hero .hero-brand-links,

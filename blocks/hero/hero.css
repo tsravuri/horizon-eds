@@ -135,7 +135,7 @@ main > .section.hero-section > div {
 
 .hero .hero-nav-menu {
 	position: absolute;
-	top: calc(100% + var(--space--x3));
+	top: 100%;
 	left: 0;
 	min-width: 220px;
 	margin: 0;

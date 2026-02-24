@@ -1,7 +1,7 @@
 /* stylelint-disable custom-property-pattern */
 
 body.has-custom-hero header {
-	height: 0;
+	display: none;
 }
 
 body.has-custom-hero header .header {
@@ -43,9 +43,7 @@ main > .section.hero-section > div {
 .hero .hero-overlay {
 	position: absolute;
 	inset: 0;
-	background:
-		linear-gradient(90deg, rgb(13 0 77 / 96%) 0%, rgb(13 0 77 / 96%) 52%, rgb(13 0 77 / 56%) 74%, rgb(13 0 77 / 48%) 100%),
-		linear-gradient(180deg, rgb(13 0 77 / 40%) 0%, rgb(13 0 77 / 76%) 75%);
+	display: none;
 }
 
 .hero .hero-shell {

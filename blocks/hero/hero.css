@@ -1,28 +1,53 @@
+/* stylelint-disable custom-property-pattern */
+
 .hero {
- background: var(--color-accent-01-dark);
- padding: 100px 20px 60px;
- text-align: center;
- color: var(--color-text-inverse);
- font-family: "Plus Jakarta Sans", sans-serif;
+	background: var(--color--ui-background-brand-01);
+	padding: var(--space--x25) var(--space--x5) var(--space--x15);
+	text-align: center;
+	color: var(--color--text-primary-inverse);
+	font-family: var(--typefamily-primary);
+}
+
+.hero .hero-content {
+	max-width: 860px;
+	margin: 0 auto;
 }
 
 .hero h1 {
- font-size: 48px;
- font-weight: 700;
- margin-bottom: 16px;
+	margin: 0;
+	color: var(--color--text-brand-04);
+	font-size: var(--typesize-h1);
+	font-weight: var(--typeweight--bold);
+	line-height: var(--leading--1-2);
 }
 
 .hero p {
- font-size: 18px;
- margin-bottom: 40px;
- opacity: 0.9;
+	margin: var(--space--x4) auto var(--space--x10);
+	color: var(--color--text-primary-inverse);
+	font-size: var(--typesize-h5);
+	font-weight: var(--typeweight--medium);
+}
+
+.hero .hero-search {
+	margin: 0 auto;
+	max-width: 680px;
 }
 
 .hero input {
- width: 520px;
- max-width: 90%;
- padding: 18px 24px;
- border-radius: 999px;
- border: none;
- font-size: 16px;
+	width: 100%;
+	border: 0;
+	border-radius: var(--corners-pill);
+	padding: var(--space--x4) var(--space--x6);
+	color: var(--color--text-primary);
+	background: var(--color--ui-field-control-background);
+	font-size: var(--typesize-default);
 }
+
+@media (width >= 900px) {
+	.hero {
+		padding-top: var(--space--x30);
+		padding-bottom: var(--space--x18);
+	}
+}
+
+/* stylelint-enable custom-property-pattern */

@@ -1,5 +1,13 @@
 /* stylelint-disable custom-property-pattern */
 
+body.has-custom-hero header {
+	height: 0;
+}
+
+body.has-custom-hero header .header {
+	display: none;
+}
+
 main > .section.hero-section {
 	margin: 0;
 }

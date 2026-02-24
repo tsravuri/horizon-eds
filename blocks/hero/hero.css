@@ -51,10 +51,10 @@ main > .section.hero-section > div {
 .hero .hero-shell {
 	position: relative;
 	z-index: 1;
-	max-width: 1280px;
+	max-width: none;
 	min-height: calc(clamp(560px, 88vh, 790px) - (var(--space--x3) * 2));
 	margin: 0 auto;
-	padding: var(--space--x4) var(--space--x7) var(--space--x15);
+	padding: var(--space--x4) var(--space--x7) var(--space--x15) var(--space--x2);
 }
 
 .hero .hero-topbar {
@@ -156,7 +156,7 @@ main > .section.hero-section > div {
 	display: block;
 	border: 0;
 	border-radius: var(--corners-pill);
-	padding: var(--space--x4) var(--space--x12) var(--space--x4) var(--space--x6);
+	padding: var(--space--x4) var(--space--x10) var(--space--x4) var(--space--x6);
 	color: var(--color--text-brand-01);
 	background: var(--color--ui-field-control-background);
 	font-size: var(--typesize-h6);
@@ -169,9 +169,9 @@ main > .section.hero-section > div {
 
 .hero .hero-search button {
 	position: absolute;
-	right: -6px;
+	right: 0;
 	top: 50%;
-	transform: translateY(-50%);
+	transform: translate(50%, -50%);
 	width: 46px;
 	height: 46px;
 	padding: 0;
@@ -210,6 +210,7 @@ main > .section.hero-section > div {
 
 	.hero .hero-shell {
 		padding-top: var(--space--x4);
+		padding-left: var(--space--x1);
 		padding-bottom: var(--space--x16);
 	}
 

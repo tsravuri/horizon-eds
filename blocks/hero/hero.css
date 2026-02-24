@@ -12,8 +12,7 @@ main > .section.hero-section > div {
 .hero {
 	position: relative;
 	overflow: hidden;
-	min-height: 100vh;
-	min-height: 100svh;
+	min-height: clamp(520px, 86vh, 760px);
 	background: var(--color--ui-background-brand-01);
 	padding: var(--space--x5);
 	text-align: center;
@@ -42,7 +41,7 @@ main > .section.hero-section > div {
 .hero .hero-shell {
 	position: relative;
 	z-index: 1;
-	max-width: none;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: var(--space--x2) 0 var(--space--x14);
 }
@@ -131,6 +130,7 @@ main > .section.hero-section > div {
 
 @media (width >= 900px) {
 	.hero {
+		min-height: clamp(600px, 88vh, 820px);
 		padding-left: var(--space--x10);
 		padding-right: var(--space--x10);
 	}

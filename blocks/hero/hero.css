@@ -1,5 +1,14 @@
 /* stylelint-disable custom-property-pattern */
 
+main > .section.hero-section {
+	margin: 0;
+}
+
+main > .section.hero-section > div {
+	max-width: none;
+	padding: 0;
+}
+
 .hero {
 	position: relative;
 	overflow: hidden;

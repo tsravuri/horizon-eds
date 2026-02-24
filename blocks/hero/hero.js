@@ -34,11 +34,10 @@ export default function decorate(block) {
         .map((item) => `<li><a href="/">${item}</a></li>`)
         .join('');
       return `<div class="hero-nav-item has-dropdown">
-        <button type="button" class="hero-nav-trigger" aria-expanded="false" aria-haspopup="true">
+        <button type="button" class="hero-nav-trigger" aria-haspopup="true">
           ${dropdown.label}
-          <span class="hero-nav-arrow" aria-hidden="true"></span>
         </button>
-        <ul class="hero-nav-menu" hidden>
+        <ul class="hero-nav-menu">
           ${menuItems}
         </ul>
       </div>`;
@@ -80,47 +79,4 @@ export default function decorate(block) {
       </div>
     </div>
   `;
-
-  const dropdownItems = [...block.querySelectorAll('.hero-nav-item.has-dropdown')];
-
-  const closeDropdown = (dropdown) => {
-    const trigger = dropdown.querySelector('.hero-nav-trigger');
-    const menu = dropdown.querySelector('.hero-nav-menu');
-    trigger.setAttribute('aria-expanded', 'false');
-    menu.hidden = true;
-  };
-
-  const closeAllDropdowns = (except = null) => {
-    dropdownItems.forEach((dropdown) => {
-      if (dropdown !== except) {
-        closeDropdown(dropdown);
-      }
-    });
-  };
-
-  dropdownItems.forEach((dropdown) => {
-    const trigger = dropdown.querySelector('.hero-nav-trigger');
-    const menu = dropdown.querySelector('.hero-nav-menu');
-
-    trigger.addEventListener('click', (event) => {
-      event.stopPropagation();
-      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
-      closeAllDropdowns(dropdown);
-      trigger.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
-      menu.hidden = isExpanded;
-    });
-
-    dropdown.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        closeDropdown(dropdown);
-        trigger.focus();
-      }
-    });
-  });
-
-  document.addEventListener('click', (event) => {
-    if (!block.contains(event.target)) {
-      closeAllDropdowns();
-    }
-  });
 }

@@ -20,7 +20,7 @@ main > .section.hero-section > div {
 .hero {
 	position: relative;
 	overflow: hidden;
-	min-height: clamp(560px, 88vh, 790px);
+	min-height: clamp(700px, 95vh, 980px);
 	background: var(--color--ui-background-brand-01);
 	padding: var(--space--x3);
 	text-align: center;
@@ -52,9 +52,9 @@ main > .section.hero-section > div {
 	position: relative;
 	z-index: 1;
 	max-width: none;
-	min-height: calc(clamp(560px, 88vh, 790px) - (var(--space--x3) * 2));
+	min-height: calc(clamp(700px, 95vh, 980px) - (var(--space--x3) * 2));
 	margin: 0 auto;
-	padding: var(--space--x4) var(--space--x7) var(--space--x15) var(--space--x2);
+	padding: var(--space--x4) var(--space--x7) var(--space--x22) var(--space--x2);
 }
 
 .hero .hero-topbar {
@@ -194,7 +194,7 @@ main > .section.hero-section > div {
 
 @media (width >= 900px) {
 	.hero {
-		min-height: clamp(640px, 90vh, 840px);
+		min-height: clamp(820px, 98vh, 1060px);
 		padding-left: var(--space--x4);
 		padding-right: var(--space--x4);
 	}
@@ -211,7 +211,7 @@ main > .section.hero-section > div {
 	.hero .hero-shell {
 		padding-top: var(--space--x4);
 		padding-left: var(--space--x1);
-		padding-bottom: var(--space--x16);
+		padding-bottom: var(--space--x28);
 	}
 
 	.hero .hero-logo img {

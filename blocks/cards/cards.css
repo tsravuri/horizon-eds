@@ -4,12 +4,15 @@ main > .section.cards-section {
   margin-top: 0;
   position: relative;
   z-index: 3;
-  padding-bottom: 140px;
+  padding-bottom: 120px;
 }
 
 .cards {
   position: relative;
-  top: -140px;
+  top: -112px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space--x6);
 }
 
 .cards > ul {
@@ -26,10 +29,11 @@ main > .section.cards-section {
   border-radius: var(--corners-card);
   background: #512eab;
   color: var(--color--text-primary-inverse);
+  min-height: 300px;
 }
 
 .cards .cards-card-body {
-  padding: var(--space--x6);
+  padding: var(--space--x6) var(--space--x7) var(--space--x8);
 }
 
 .cards .cards-card-body > p:first-child {
@@ -41,9 +45,9 @@ main > .section.cards-section {
 }
 
 .cards .cards-card-body > p:nth-child(2) {
-  margin: var(--space--x3) 0;
+  margin: var(--space--x3) 0 var(--space--x4);
   color: var(--color--text-primary-inverse);
-  font-size: var(--typesize-h3);
+  font-size: var(--typesize-h2);
   font-weight: var(--typeweight--medium);
   line-height: var(--leading--1-3);
 }
@@ -61,18 +65,20 @@ main > .section.cards-section {
 .cards .cards-card-body .button {
   border: 0;
   background: var(--color--interactive-action);
-  color: var(--color--text-primary);
+  color: var(--color--text-brand-01);
   font-size: var(--typesize-minor);
   font-weight: var(--typeweight--semibold);
+  min-width: 192px;
+  text-align: center;
 }
 
 @media (width >= 900px) {
   main > .section.cards-section {
-    padding-bottom: 180px;
+    padding-bottom: 120px;
   }
 
   .cards {
-    top: -180px;
+    top: -128px;
   }
 
   .cards > ul {

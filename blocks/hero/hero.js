@@ -1,4 +1,7 @@
 export default function decorate(block) {
+  document.body.style.overflowY = '';
+  document.documentElement.style.overflowY = '';
+
   const section = block.closest('.section');
   if (section) {
     section.classList.add('hero-section');

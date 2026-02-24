@@ -2,7 +2,7 @@
 
 main > .section.cards-section,
 main > .section.cards-container {
-  margin-top: 0;
+  margin-top: -240px;
   position: relative;
   z-index: 3;
   padding-bottom: 120px;
@@ -12,7 +12,7 @@ main > .section.cards-container {
   position: relative;
   top: 0;
   max-width: 1280px;
-  margin: -240px auto 0;
+  margin: 0 auto;
   padding: 0 var(--space--x6);
 }
 
@@ -94,13 +94,12 @@ main > .section.cards-container {
 @media (width >= 900px) {
   main > .section.cards-section,
   main > .section.cards-container {
-    margin-top: 0;
+    margin-top: -300px;
     padding-bottom: 120px;
   }
 
   .cards {
     top: 0;
-    margin-top: -300px;
   }
 
   .cards > ul {

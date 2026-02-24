@@ -5,16 +5,19 @@
  color: var(--color-text-inverse);
  font-family: "Plus Jakarta Sans", sans-serif;
 }
+
 .hero h1 {
  font-size: 48px;
  font-weight: 700;
  margin-bottom: 16px;
 }
+
 .hero p {
  font-size: 18px;
  margin-bottom: 40px;
  opacity: 0.9;
 }
+
 .hero input {
  width: 520px;
  max-width: 90%;

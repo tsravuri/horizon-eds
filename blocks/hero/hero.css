@@ -63,6 +63,7 @@ main > .section.hero-section > div {
 	justify-content: space-between;
 	gap: var(--space--x4);
 	flex-wrap: nowrap;
+	background: var(--color--ui-background-brand-01);
 }
 
 .hero .hero-brand-links,
@@ -92,7 +93,7 @@ main > .section.hero-section > div {
 	line-height: var(--leading--1-2);
 }
 
-.hero .hero-brand-links > a:not(.hero-logo, :last-child)::after {
+.hero .hero-brand-links > a:not(.hero-logo)::after {
 	content: ' >';
 	margin-left: var(--space--x2);
 	font-weight: var(--typeweight--bold);
@@ -169,7 +170,7 @@ main > .section.hero-section > div {
 
 .hero .hero-search button {
 	position: absolute;
-	right: calc(var(--space--x1) * -1);
+	right: calc(var(--space--x4) * -1);
 	top: 50%;
 	transform: translate(50%, -50%);
 	width: 46px;

@@ -6,18 +6,6 @@
 
 | Cards |
 | --- |
-| Lorem Ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-[Visit our Store](/) |
-| Lorem Ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-[Book Now](/) |
-| Lorem Ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-[Enroll Now](/) |
+| <p>LOREM IPSUM</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p><a href="/">Visit our Store</a></p> |
+| <p>LOREM IPSUM</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p><a href="/">Book Now</a></p> |
+| <p>LOREM IPSUM</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p><a href="/">Enroll Now</a></p> |

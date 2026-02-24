@@ -1,5 +1,11 @@
 /* stylelint-disable custom-property-pattern */
 
+main > .section.cards-section {
+  margin-top: calc(var(--space--x14) * -1);
+  position: relative;
+  z-index: 3;
+}
+
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -55,6 +61,10 @@
 }
 
 @media (width >= 900px) {
+  main > .section.cards-section {
+    margin-top: calc(var(--space--x20) * -1);
+  }
+
   .cards > ul {
     grid-template-columns: repeat(3, 1fr);
   }

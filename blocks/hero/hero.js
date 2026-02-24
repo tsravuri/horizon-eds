@@ -1,4 +1,9 @@
 export default function decorate(block) {
+  const section = block.closest('.section');
+  if (section) {
+    section.classList.add('hero-section');
+  }
+
   const values = [...block.children]
     .map((row) => row.textContent.trim())
     .filter(Boolean);

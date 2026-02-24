@@ -1,7 +1,7 @@
 /* stylelint-disable custom-property-pattern */
 
 main > .section.cards-section {
-  margin-top: -26svh;
+  margin-top: -140px;
   position: relative;
   z-index: 3;
 }
@@ -62,7 +62,7 @@ main > .section.cards-section {
 
 @media (width >= 900px) {
   main > .section.cards-section {
-    margin-top: -30svh;
+    margin-top: -180px;
   }
 
   .cards > ul {

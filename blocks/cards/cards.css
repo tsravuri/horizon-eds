@@ -1,9 +1,14 @@
 /* stylelint-disable custom-property-pattern */
 
 main > .section.cards-section {
-  margin-top: calc(var(--space--x14) * -1);
+  margin-top: 0;
   position: relative;
   z-index: 3;
+}
+
+.cards {
+  transform: translateY(-140px);
+  margin-bottom: -140px;
 }
 
 .cards > ul {
@@ -61,8 +66,9 @@ main > .section.cards-section {
 }
 
 @media (width >= 900px) {
-  main > .section.cards-section {
-    margin-top: calc(var(--space--x20) * -1);
+  .cards {
+    transform: translateY(-180px);
+    margin-bottom: -180px;
   }
 
   .cards > ul {

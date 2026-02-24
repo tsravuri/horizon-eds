@@ -50,7 +50,7 @@ main > .section.cards-container {
   margin: var(--space--x3) 0 var(--space--x4);
   color: var(--color--text-primary-inverse);
   font-size: var(--typesize-h3);
-  font-weight: var(--typeweight--medium);
+  font-weight: var(--typeweight--regular);
   line-height: var(--leading--1-2);
 }
 
@@ -79,7 +79,7 @@ main > .section.cards-container {
   background: var(--color--interactive-action);
   color: var(--color--text-brand-01);
   font-size: var(--typesize-minor);
-  font-weight: var(--typeweight--semibold);
+  font-weight: var(--typeweight--medium);
   min-width: 192px;
   text-align: center;
   text-decoration: none;
